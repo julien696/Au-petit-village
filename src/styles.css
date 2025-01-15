@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "bubbleboddyNeue";
+    src: url("/assets/fonts/bubbleboddyneue.woff");
+    src: url("/assets/fonts/bubbleboddyneue.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Comfortaa";
+    src: url("/assets/fonts/Comfortaa.woff");
+    src: url("/assets/fonts/Comfortaa.ttf") format("truetype");
+}
+
+body{
+    background-image:linear-gradient(#F9D0A3, rgba(218,0,30,0.8));
+}
+
+*{
+    font-family: "Comfortaa";
+}
+
+
+h1, h2, h3, h4, h5{
+    font-family: "bubbleboddyNeue";
+}
