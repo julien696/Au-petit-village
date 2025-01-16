@@ -22,4 +22,10 @@ export class ProductsService {
     return this.figurines
   }
 
+  filterFigurinesByTitle(title: string) {
+    return this.figurines.filter(figurine =>
+      figurine.title.toLowerCase().includes(title.toLowerCase())
+    );
+  }
+
 }

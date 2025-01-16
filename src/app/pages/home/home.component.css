@@ -1,7 +1,29 @@
 .title{
     font-size: 2rem;
 }
+/*-----------------------------serach-bar-----------------------------------------*/
+.search-bar{
+    display: flex;
+    border-radius: 40px;
+    margin: 50px auto;
+    width: 400px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 3px 3px 10px -3px #F9D0A3;
+}
 
+.search-bar__input{
+    all: unset;
+    flex-grow: 1;
+    padding: 10px 20px;
+}
+
+.search-bar__img{
+    max-width: 18px;
+    max-height: 18px;
+}
+
+/*--------------------------figurine---------------------------------------------------*/
 
 .figurine__container{
     display: flex;

@@ -1,30 +1,47 @@
-import { Component, inject, } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from "../../components/header/header.component";
 import { ProductsService } from '../../services/products.service';
 import { SortByPricePipe } from '../../pipe/sort-by-price.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-home',
-  imports: [HeaderComponent, CommonModule, SortByPricePipe],
+  imports: [HeaderComponent, CommonModule, SortByPricePipe, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
 
   productsService = inject(ProductsService)
+  
+  figurines: any[] = [];
+  filteredFigurines: any[] = [];
 
-   figurines: any[] = [];
+  sortOrder: string = 'asc';
+  searchTerm: string = '';
 
-  constructor() {
-    this.figurines = this.productsService.getAll()
+
+  constructor() {}
+  
+  ngOnInit(){
+    this.figurines = this.productsService.getAll();
+    this.filteredFigurines = this.figurines;
   }
 
-  sortOrder : string = 'asc';
 
-  changeSortOrder(order : string){
+   changeSortOrder(order : string){
     this.sortOrder = order
+  }
+
+
+  onSearch(): void {
+    if (this.searchTerm) {
+      this.filteredFigurines = this.productsService.filterFigurinesByTitle(this.searchTerm)
+    } else {
+      this.filteredFigurines = this.figurines;
+    }
   }
 
 }
