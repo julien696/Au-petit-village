@@ -1,23 +1,30 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, inject, } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from "../../components/header/header.component";
 import { ProductsService } from '../../services/products.service';
+import { SortByPricePipe } from '../../pipe/sort-by-price.pipe';
 
 
 @Component({
   selector: 'app-home',
-  standalone: true,
-  imports: [HeaderComponent, CommonModule],
+  imports: [HeaderComponent, CommonModule, SortByPricePipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+
+  productsService = inject(ProductsService)
+
    figurines: any[] = [];
-  constructor(private productsService: ProductsService) {
-    
+
+  constructor() {
+    this.figurines = this.productsService.getAll()
   }
 
-  ngOnInit(): void {
-    this.figurines = this.productsService.figurines
+  sortOrder : string = 'asc';
+
+  changeSortOrder(order : string){
+    this.sortOrder = order
   }
+
 }
