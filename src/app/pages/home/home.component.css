@@ -1,10 +1,39 @@
+.welcome__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+
+}
+
+.welcome__title{
+    font-size: 3rem;
+    color: #151217;  
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px #151217 ; 
+    padding-bottom: 1rem;
+}
+
+.welcome__img{
+   width: 100%;
+   object-fit: cover;
+}
+
+.welcome__para{
+    margin: 2rem;
+    font-size: 1rem;
+    text-align: center;
+
+}
+
 .title{
     font-size: 2rem;
 }
 
 .order__container{
     display: flex;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .order__btn{
@@ -50,9 +79,10 @@
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    border: solid 1px #151217;
+    box-shadow: 3px 3px 15px -3px #F9D0A3;
     border-radius: 20px;
-    background-color: #FDD90B;
+    border: solid 2px #FDD90B;
+   
 }
 
 .figurine:hover{
@@ -62,6 +92,7 @@
 .figurine__name{
     text-align: center;
     font-size: 1.8rem;
+    color: #DA001E;
 }
 
 .figurine__image{
@@ -72,8 +103,10 @@
 
 .figurine__description{
     display: block;
+    box-sizing: border-box;
     text-align: center;
     margin: 1rem 0;
+    padding: 0 1rem;
     max-width: 300px;
     font-size: 1rem;
 }
