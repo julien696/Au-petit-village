@@ -1,6 +1,20 @@
 .title{
     font-size: 2rem;
 }
+
+.order__container{
+    display: flex;
+    margin: 2rem;
+}
+
+.order__btn{
+    border-radius: 40px;
+    margin: auto 1rem;
+    border: none;
+    background-color: white;
+    box-shadow: 3px 3px 10px -3px #F9D0A3;
+    cursor: pointer;
+}
 /*-----------------------------serach-bar-----------------------------------------*/
 .search-bar{
     display: flex;
@@ -18,10 +32,7 @@
     padding: 10px 20px;
 }
 
-.search-bar__img{
-    max-width: 18px;
-    max-height: 18px;
-}
+
 
 /*--------------------------figurine---------------------------------------------------*/
 
@@ -48,7 +59,7 @@
     cursor: zoom-in;
 }
 
-.figurine__title{
+.figurine__name{
     text-align: center;
     font-size: 1.8rem;
 }
