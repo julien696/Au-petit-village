@@ -2,16 +2,16 @@
 <main class="main__home">
     <h1 class="title">Toutes Nos Figurines</h1>
     <div class="search-bar">
-        <input type="text" [(ngModel)]="searchTerm" (input)="onSearch()" placeholder="recherche" class="search-bar__input">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="recherche" class="search-bar__input">
     </div>
-    <div>
+    <div class="order__container">
         <span>Trier par : </span>
-        <button (click)="changeSortOrder('asc')" class="btn">Prix Croissaant</button>
-        <button (click)="changeSortOrder('desc')" class="btn">Prix Décroissaant</button>
+        <button (click)="changeSortOrder('asc')" class="order__btn">Prix Croissant</button>
+        <button (click)="changeSortOrder('desc')" class="order__btn">Prix Décroissant</button>
     </div>
     <div class="figurine__container">
-        <section *ngFor="let figurine of filteredFigurines | sortByPrice: sortOrder" class="figurine">
-                <h2 class="figurine__title">{{figurine.title}}</h2>
+        <section *ngFor="let figurine of filteredFigurines | sortByPrice: sortOrder | sortByName: searchTerm" class="figurine">
+                <h2 class="figurine__name">{{figurine.name}}</h2>
                 <img src={{figurine.imageSrc}} alt={{figurine.imageAlt}} class="figurine__image">
                 <span class="figurine__description">{{figurine.description}}</span>
                 <span class="figurine__price">{{figurine.price}} €</span>

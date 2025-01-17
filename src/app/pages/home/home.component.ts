@@ -4,11 +4,12 @@ import { HeaderComponent } from "../../components/header/header.component";
 import { ProductsService } from '../../services/products.service';
 import { SortByPricePipe } from '../../pipe/sort-by-price.pipe';
 import { FormsModule } from '@angular/forms';
+import { SortByNamePipe } from '../../pipe/sort-by-name.pipe';
 
 
 @Component({
   selector: 'app-home',
-  imports: [HeaderComponent, CommonModule, SortByPricePipe, FormsModule],
+  imports: [HeaderComponent, CommonModule, SortByPricePipe, SortByNamePipe, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -36,12 +37,7 @@ export class HomeComponent {
   }
 
 
-  onSearch(): void {
-    if (this.searchTerm) {
-      this.filteredFigurines = this.productsService.filterFigurinesByTitle(this.searchTerm)
-    } else {
-      this.filteredFigurines = this.figurines;
-    }
-  }
+  
+  
 
 }

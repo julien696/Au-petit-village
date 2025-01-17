@@ -1,6 +1,6 @@
 export class figurine {
     id: number = 0;
-    title: string = "";
+    name: string = "";
     price: number = 0; 
     description: string ="";
     imageSrc: string="";
