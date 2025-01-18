@@ -75,13 +75,11 @@
    
 }
 
-.figurine:hover{
-    cursor: zoom-in;
-}
 
 .figurine__name{
     text-align: center;
     font-size: 1.8rem;
+    margin: 1.2rem;
     color: #DA001E;
 }
 
@@ -95,10 +93,14 @@
     display: block;
     box-sizing: border-box;
     text-align: center;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
     padding: 0 1rem;
     max-width: 300px;
     font-size: 1rem;
+}
+
+.figurine__price{
+    margin-bottom: 1rem;
 }
 
 /*------------------------------------------------------------*/
