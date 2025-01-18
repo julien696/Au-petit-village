@@ -1,1 +1,15 @@
-<h1>Page produit</h1>
+<main>
+    <h1 class="title">Page produit</h1>
+    <div *ngIf = "figurine">
+        <div class="figurine">
+            <div class="container">
+                <img src={{figurine.imageSrc}} alt={{figurine.imageAlt}} class="figurine__image">
+            </div>
+            <div class="container">
+                <h2 class="figurine__name">{{figurine.name}}</h2>
+                <span class="figurine__description">{{figurine.description}}</span>
+                <span class="figurine__price">Prix {{figurine.price}}€</span>
+            </div>
+        </div>
+    </div>
+</main>

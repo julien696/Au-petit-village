@@ -22,6 +22,10 @@ export class ProductsService {
     return this.figurines
   }
 
+  getFigurinetById(id: number) {
+    return this.figurines.find(figurine => figurine.id === id);
+  }
+
   
 
 }
