@@ -20,7 +20,7 @@
                 <h3 class="figurine__name">{{figurine.name}}</h3>
                 <span class="figurine__description">{{figurine.description}}</span>
                 <span class="figurine__price">Prix {{figurine.price}}€</span>
-                <a [routerLink] = "['/product', figurine.id]">Plus de détails</a>
+                <a [routerLink] = "['/product', figurine.id]" class="figurine__detail">Plus de détails</a>
             </div>
         </div>
     </div>
