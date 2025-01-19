@@ -103,6 +103,14 @@
     margin-bottom: 1rem;
 }
 
+.figurine__detail{
+    color: #151217;
+}
+
+.figurine__detail:hover{
+    color:#DA001E;
+}
+
 /*------------------------------------------------------------*/
 
 .order__container{
