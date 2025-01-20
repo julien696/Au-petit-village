@@ -1,0 +1,25 @@
+.about__title{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.about__para{
+    margin: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    border: 2px solid #151217;
+    border-radius: 100px;
+    padding: 2rem;
+    background-color: white;
+    margin: 2rem 5rem;
+    box-shadow: 2px 4px 10px #151217;
+    font-size: 1rem;
+
+}
+
+.about__img{
+    max-width: 100%;
+    object-fit: cover;
+}
