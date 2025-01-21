@@ -1,1 +1,24 @@
-<h1>Page de contact</h1>
+<main>
+    <h1 class="title">Nous contacter</h1>
+    <div class="form__container">
+        <form [formGroup]="contactForm" (ngsubmit)="onSubmit()" class="form">
+            <input type="text" formControlName="name" required placeholder="Prénom" class="input"/>
+            <span *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error">
+            <small>Veuillez saisir sotre prénom</small>
+            </span>
+            <input type="text" formControlName="lastname" required placeholder="Nom" class="input"/>
+            <span *ngIf="contactForm.get('lastname')?.invalid && contactForm.get('lastname')?.touched" class="error">
+            <small>Veuillez saisir votre Nom</small>
+            </span>
+            <input type="text" formControlName="subject" required placeholder="Sujet" class="input"/>
+            <span *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched" class="error">
+                <small>Indiquez le sujet</small>
+            </span>
+            <textarea formControlName="message" required placeholder="Votre message" rows="5" class="input"></textarea>
+                <span *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error">
+                    <small>Veuillez saisir votre message</small>
+                </span>
+            <input type="submit" (click)="onSubmit()" class="submit"/>
+        </form>
+    </div>
+</main>
